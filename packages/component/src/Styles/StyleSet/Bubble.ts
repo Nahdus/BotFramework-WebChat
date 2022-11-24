@@ -26,10 +26,15 @@ export default function createBubbleStyle({
   transitionDuration
 }: StrictStyleOptions) {
   const botNubCornerRadius =
-    typeof bubbleNubOffset === 'number' ? Math.min(bubbleBorderRadius, Math.abs(bubbleNubOffset)) : bubbleBorderRadius;
+    typeof bubbleNubOffset === 'number'
+      ? Math.min(typeof bubbleBorderRadius === 'number' ? bubbleBorderRadius : 2, Math.abs(bubbleNubOffset))
+      : bubbleBorderRadius;
   const userNubCornerRadius =
     typeof bubbleFromUserNubOffset === 'number'
-      ? Math.min(bubbleFromUserBorderRadius, Math.abs(bubbleFromUserNubOffset))
+      ? Math.min(
+          typeof bubbleFromUserBorderRadius === 'number' ? bubbleFromUserBorderRadius : 2,
+          Math.abs(bubbleFromUserNubOffset)
+        )
       : bubbleFromUserBorderRadius;
 
   return {

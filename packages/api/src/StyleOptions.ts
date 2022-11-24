@@ -127,12 +127,12 @@ type StyleOptions = {
 
   bubbleBackground?: string;
   bubbleBorderColor?: string;
-  bubbleBorderRadius?: number;
+  bubbleBorderRadius?: number | string;
   bubbleBorderStyle?: string;
   bubbleBorderWidth?: number;
   bubbleFromUserBackground?: string;
   bubbleFromUserBorderColor?: string;
-  bubbleFromUserBorderRadius?: number;
+  bubbleFromUserBorderRadius?: number | string;
   bubbleFromUserBorderStyle?: string;
   bubbleFromUserBorderWidth?: number;
 
