@@ -40,19 +40,19 @@ const DEFAULT_OPTIONS: Required<StyleOptions> = {
 
   // Bubble
   // TODO: Should we make a bubbleFromBot*
-  bubbleBackground: 'White',
+  bubbleBackground: '#edf2f7',
   bubbleBorderColor: '#E6E6E6',
   bubbleBorderRadius: 2,
   bubbleBorderStyle: 'solid',
   bubbleBorderWidth: 1,
-  bubbleFromUserBackground: 'White',
+  bubbleFromUserBackground: '#24235c',
   bubbleFromUserBorderColor: '#E6E6E6',
   bubbleFromUserBorderRadius: 2,
   bubbleFromUserBorderStyle: 'solid',
   bubbleFromUserBorderWidth: 1,
   bubbleFromUserNubOffset: 0,
   bubbleFromUserNubSize: undefined,
-  bubbleFromUserTextColor: 'Black',
+  bubbleFromUserTextColor: 'White',
   bubbleImageHeight: 240,
   bubbleMaxWidth: 480, // Based off screen width = 600px
   bubbleMinHeight: 40,
@@ -143,16 +143,16 @@ const DEFAULT_OPTIONS: Required<StyleOptions> = {
   spinnerAnimationPadding: 12,
 
   // Suggested actions
-  suggestedActionBorderRadius: 0,
+  suggestedActionBorderRadius: 25,
   suggestedActionHeight: 40,
   suggestedActionImageHeight: 20,
   suggestedActionLayout: 'carousel',
 
-  suggestedActionBackgroundColor: 'White',
-  suggestedActionBorderColor: undefined,
+  suggestedActionBackgroundColor: '#cfcfcf42',
+  suggestedActionBorderColor: '#f6f6f6',
   suggestedActionBorderStyle: 'solid',
   suggestedActionBorderWidth: 2,
-  suggestedActionTextColor: undefined,
+  suggestedActionTextColor: '#000',
 
   suggestedActionBackgroundColorOnActive: '#EDEBE9',
   suggestedActionBorderColorOnActive: undefined,
@@ -166,13 +166,13 @@ const DEFAULT_OPTIONS: Required<StyleOptions> = {
   suggestedActionBorderWidthOnDisabled: undefined,
   suggestedActionTextColorOnDisabled: undefined,
 
-  suggestedActionBackgroundColorOnFocus: undefined,
+  suggestedActionBackgroundColorOnFocus: '#dedede',
   suggestedActionBorderColorOnFocus: undefined,
   suggestedActionBorderStyleOnFocus: undefined,
   suggestedActionBorderWidthOnFocus: undefined,
   suggestedActionTextColorOnFocus: undefined,
 
-  suggestedActionBackgroundColorOnHover: '#F3F2F1',
+  suggestedActionBackgroundColorOnHover: '#dedede',
   suggestedActionBorderColorOnHover: undefined,
   suggestedActionBorderStyleOnHover: undefined,
   suggestedActionBorderWidthOnHover: undefined,
