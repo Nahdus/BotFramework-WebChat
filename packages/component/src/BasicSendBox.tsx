@@ -53,7 +53,7 @@ type BasicSendBoxProps = {
 const BasicSendBox: FC<BasicSendBoxProps> = ({ className }) => {
   const [{ hideUploadButton, sendBoxButtonAlignment }] = useStyleOptions();
   const [{ sendBox: sendBoxStyleSet }] = useStyleSet();
-  const [{ SpeechRecognition = undefined } = {}] = useWebSpeechPonyfill();
+  const [{ SpeechRecognition = true } = {}] = useWebSpeechPonyfill();
   const [direction] = useDirection();
   const [speechInterimsVisible] = useSendBoxSpeechInterimsVisible();
   const styleToEmotionObject = useStyleToEmotionObject();
@@ -76,17 +76,16 @@ const BasicSendBox: FC<BasicSendBoxProps> = ({ className }) => {
     >
       <SuggestedActions />
       <div className="webchat__send-box__main">
+        {supportSpeechRecognition && (
+          <MicrophoneButton className={classNames(buttonClassName, 'webchat__send-box__microphone-button')} />
+        )}
         {!hideUploadButton && <UploadButton className={buttonClassName} />}
         {speechInterimsVisible ? (
           <DictationInterims className="webchat__send-box__dictation-interims" />
         ) : (
           <TextBox className="webchat__send-box__text-box" />
         )}
-        {supportSpeechRecognition ? (
-          <MicrophoneButton className={classNames(buttonClassName, 'webchat__send-box__microphone-button')} />
-        ) : (
-          <SendButton className={buttonClassName} />
-        )}
+        <SendButton className={buttonClassName} />
       </div>
     </div>
   );
