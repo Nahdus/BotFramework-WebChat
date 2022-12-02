@@ -4,10 +4,10 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { FC } from 'react';
 import type { WebChatActivity } from 'botframework-webchat-core';
-
 import DictationInterims from './SendBox/DictationInterims';
 import MicrophoneButton from './SendBox/MicrophoneButton';
 import SendButton from './SendBox/SendButton';
+import TranslateButton from './SendBox/TranslateButton';
 import SuggestedActions from './SendBox/SuggestedActions';
 import TextBox from './SendBox/TextBox';
 import UploadButton from './SendBox/UploadButton';
@@ -86,6 +86,7 @@ const BasicSendBox: FC<BasicSendBoxProps> = ({ className }) => {
           <TextBox className="webchat__send-box__text-box" />
         )}
         <SendButton className={buttonClassName} />
+        <TranslateButton />
       </div>
     </div>
   );

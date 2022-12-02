@@ -30,6 +30,7 @@ function App() {
   // wordBreak styleOption is in regards to css feature word-break: 'break-all' (as an example) within the activity bubble
   const wordBreakTooltipProps = {
     onRenderContent: () => (
+// eslint-disable-next-line
       <ol style={{ margin: 10, padding: 10 }}>
         <li>
           Send 'https://subdomain.domain.com/pathname0/pathname1/pathname2/pathname3/pathname4/' to test 'break-all{' '}
