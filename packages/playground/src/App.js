@@ -366,7 +366,7 @@ function App() {
         dir={dir}
         directLine={directLine}
         disabled={uiDisabled}
-        locale={locale}
+        locale={'de-DE'}
         sendTypingIndicator={sendTypingIndicator}
         store={store}
         styleOptions={styleOptions}
